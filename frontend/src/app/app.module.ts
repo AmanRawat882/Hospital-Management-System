@@ -9,6 +9,7 @@ import { BookingComponent } from './booking/booking.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { HomeComponent } from './home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     BookingComponent,
     AboutUsComponent,
     ContactUsComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
