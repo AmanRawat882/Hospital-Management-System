@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctors.component.css']
 })
 export class DoctorsComponent implements OnInit {
-
+  public category: string="";
   constructor() { }
+  
 
   ngOnInit(): void {
   }
