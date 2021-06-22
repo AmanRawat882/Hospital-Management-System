@@ -1,24 +1,15 @@
-import { Component } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-  
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers: [NgbCarouselConfig]
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  title = 'ng-carousel-demo';
-  
-  images = [
-    {title: 'First Slide', short: 'First Slide Short', src: "https://picsum.photos/id/700/900/500"},
-    {title: 'Second Slide', short: 'Second Slide Short', src: "https://picsum.photos/id/1011/900/500"},
-    {title: 'Third Slide', short: 'Third Slide Short', src: "https://picsum.photos/id/984/900/500"}
-  ];
-  
-  constructor(config: NgbCarouselConfig) {
-    config.interval = 2000;
-    config.keyboard = true;
-    config.pauseOnHover = true;
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
   }
+
 }
