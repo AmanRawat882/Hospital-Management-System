@@ -1,4 +1,23 @@
 .booking
 {
     text-align: center;
+    margin: 40px;
+    }
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 70%;
+    min-height: 70%;
+    border-radius: 5%;
+    box-shadow:thistle 20px ;
+    
+}
+.form
+{
+    text-align: center;
 }

@@ -24,5 +24,7 @@ export class BookingComponent{
   });
   onSubmit() {
     console.warn(this.profileForm.value);
+    alert("Your Form has been submitted successfully");
+    this.profileForm.reset();
   }
 }
