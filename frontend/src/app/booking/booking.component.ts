@@ -23,8 +23,6 @@ export class BookingComponent{
   admitted:new FormControl(''),
   });
   onSubmit() {
-    // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
   }
 }
-
