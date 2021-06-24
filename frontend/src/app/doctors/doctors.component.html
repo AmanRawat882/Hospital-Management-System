@@ -1,5 +1,28 @@
 <div style="text-align: center;">
     <h2 style="padding-bottom: 30px;">Doctors</h2>
 <div *ngFor="let doctor of doctors">
-       <div>{{doctor.name}} {{doctor.speciality}}</div>
+       
+        <!--<div>{{doctor.name}} {{doctor.speciality}}</div>-->
+       
+<table style="border-collapse: collapse;margin: 25px 0;font-size: 0.9em;font-family: sans-serif;min-width: 400px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);margin-left: auto;margin-right: auto;">
+    <thead>
+        <tr style="background-color: #009879;
+        color: #ffffff;
+        text-align: center;">
+            <th style="padding: 12px 15px;">Name</th>
+            <th style="padding: 12px 15px;">Speciality</th>
+            <th style="padding: 12px 15px;">Fees</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 12px 15px;">{{doctor.name}}</td>
+            <td style="padding: 12px 15px;">{{doctor.speciality}}</td>
+            <td style="padding: 12px 15px;">{{doctor.fees}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+</div>
 </div>
