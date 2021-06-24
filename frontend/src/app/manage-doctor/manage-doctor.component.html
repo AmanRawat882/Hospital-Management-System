@@ -1,5 +1,23 @@
 <div class="container">    
   <h2>Manage Doctors</h2>
-    <h1>You are successfully logged in</h1>    
-    <button (click)="logout()" class="btn btn-danger">Logout</button>    
+  <br>
+  <br>
+  <h1>You are successfully logged in</h1>    
+  <button type="button" (click)="toggle()"><h3>Add Doctor</h3></button>
+  
+  <div *ngIf="show">
+    <form [formGroup]="doctorform" (ngSubmit)="onSubmit()"></form>
+    <label for="name">Full Name: </label><br>
+    <input id="name" type="text" formControlName="name">
+    <br>
+    <label for="speciality">Speciality: </label><br>
+    <input id="speciality" type="text" formControlName="speciality">
+    <br>
+    <label for="fees">Fees: </label><br>
+    <input id="fees" type="text" formControlName="fees">
+    <br>
+    <button type="submit">Submit</button>
+  </div>
+  <br>
+  <button (click)="logout()" class="btn btn-danger">Logout</button>    
   </div>   

@@ -11,6 +11,7 @@ export class PatientService {
   private apiUrl=environment.apiBaseUrl;
   constructor(private http:HttpClient) { }
   public addAppointment(patient:Patient):Observable<any>{
-    return this.http.post(this.apiUrl+'/api/patient/create',patient,{responseType: 'text'});
+    return this.http.post(this.apiUrl+'/api/patient/create',patient,
+    {responseType: 'text'});
   }
 }

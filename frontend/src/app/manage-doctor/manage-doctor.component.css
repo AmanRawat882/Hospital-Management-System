@@ -1,3 +1,54 @@
 h2{
     text-align: center;
 }
+.tabs-container{
+    border: 0px solid black;
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 5px;
+   }
+   
+   /* tab header */
+   .tabs-header{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   
+   .tabs-header li{
+    float: left;
+    padding: 10px 15px;
+    text-align: center;
+    margin-right: 1px;
+    background: cornflowerblue;
+    border: 5px 0px;
+    color: white;
+   }
+   
+   .tabs-header li:hover{
+    cursor: pointer;
+   }
+   
+   /* tab content */
+   .tab{
+    display: inline-block;
+    width: 99%;
+    height: 300px;
+    clear: both;
+    border: 1px solid black;
+    margin-top: 5px !important;
+    padding:5px;
+   }
+   
+   .tab p{
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-size:17px; 
+    text-align: justify; 
+   }
+   
+   .tab a{
+    text-decoration: none;
+    color: blue;
+   }

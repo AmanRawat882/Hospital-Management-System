@@ -40,9 +40,11 @@ export class BookingComponent{
     );
   }
   public addAppointment(formValue:Patient):void{
-    this.patientService.addAppointment(formValue).subscribe((response:number)=>{this.patientId=response;},(error:HttpErrorResponse)=>{alert(error.message);});
+    this.patientService.addAppointment(formValue).
+    subscribe((response:number)=>{this.patientId=response;},
+    (error:HttpErrorResponse)=>{alert(error.message);});
   }
-
+  
   ngOnInit(): void {
     this.getDoctors();
   }
