@@ -8,6 +8,7 @@ import { DoctorService } from '../doctor.service';
   templateUrl: './doctors.component.html',
   styleUrls: ['./doctors.component.css']
 })
+
 export class DoctorsComponent implements OnInit {
   public doctors!: Doctor[];
   constructor(private doctorService:DoctorService) { }

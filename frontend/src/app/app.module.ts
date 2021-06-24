@@ -11,9 +11,11 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { HomeComponent } from './home/home/home.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthenticationService } from './_service/authentication.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ManageDoctorComponent } from './manage-doctor/manage-doctor.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactUsComponent,
     AdminPanelComponent,
     HomeComponent,
-    DoctorsComponent,  
+    DoctorsComponent,
+    ManageDoctorComponent,  
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
