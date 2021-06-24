@@ -1,6 +1,6 @@
 <div style="text-align: center;">
     <h2 style="padding-bottom: 30px;">Doctors</h2>
-<div *ngFor="let doctor of doctors">
+<div>
        
         <!--<div>{{doctor.name}} {{doctor.speciality}}</div>-->
        
@@ -16,8 +16,8 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);margin-left: auto;margin-right: auto;">
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td style="padding: 12px 15px;">{{doctor.name}}</td>
+        <tr *ngFor="let doctor of doctors">
+            <th style="padding: 12px 15px;">{{doctor.name}}</th>
             <td style="padding: 12px 15px;">{{doctor.speciality}}</td>
             <td style="padding: 12px 15px;">{{doctor.fees}}</td>
         </tr>
