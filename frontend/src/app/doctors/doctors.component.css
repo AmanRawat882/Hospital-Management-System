@@ -1,0 +1,12 @@
+.doctors
+{
+    text-align: center;
+    margin: 30px;
+    font-size: medium;
+}
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
