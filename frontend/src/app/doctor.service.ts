@@ -14,7 +14,7 @@ export class DoctorService {
     return this.http.get<any>(this.apiUrl+'/api/doctor/all');
   }
   public addDoctors(managedoctor:Doctor):Observable<any>{
-    return this.http.post<any>(this.apiUrl+'/api/doctor/create',
-    managedoctor);
+    return this.http.post(this.apiUrl+'/api/patient/create',managedoctor,
+    {responseType: 'text'});
   }
 }
