@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';  
 import { Router } from '@angular/router';  
-import { ManageDoctor } from '../manage-doctor';
-import { ManageDoctorService } from '../manage-doctor.service';
 import { AuthenticationService } from '../_service/authentication.service';  
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { DoctorService } from '../doctor.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({  
   selector: 'app-home',  
@@ -14,7 +14,7 @@ export class ManageDoctorComponent implements OnInit {
  
   public show: boolean = false;
 public buttonName: any = true;
-  constructor(private router: Router, private authenticationService: AuthenticationService,private manageDoctorService:ManageDoctorService) { }  
+  constructor(private router: Router, private authenticationService: AuthenticationService,private manageDoctorService:DoctorService) { }  
   ngOnInit() {  
   }  
     
@@ -42,12 +42,12 @@ onSubmit() {
 }
 addDoctors()
 {
-  this.doctorform.value.doctorId='';
-    this.doctorform.value.slots='';
+  this.doctorform.value.doctorId=0;
+    this.doctorform.value.slots=100;
+    console.log(this.doctorform.value);
   this.manageDoctorService.addDoctors(this.doctorform.value)
-      .subscribe(data => {
-        console.log(data);
-      })      
+      .subscribe((response:number)=>(alert('Doctor Added successfully with ID'+response)),
+      (error:HttpErrorResponse)=>(alert(error.message)));    
 }
 
 }

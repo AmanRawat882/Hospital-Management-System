@@ -6,7 +6,7 @@
   <button type="button" (click)="toggle()"><h3>Add Doctor</h3></button>
   
   <div *ngIf="show">
-    <form [formGroup]="doctorform" (ngSubmit)="onSubmit()"></form>
+    <form [formGroup]="doctorform" (ngSubmit)="onSubmit()">
     <label for="name">Full Name: </label><br>
     <input id="name" type="text" formControlName="name">
     <br>
@@ -17,6 +17,7 @@
     <input id="fees" type="text" formControlName="fees">
     <br>
     <button type="submit">Submit</button>
+  </form>
   </div>
   <br>
   <button (click)="logout()" class="btn btn-danger">Logout</button>    
