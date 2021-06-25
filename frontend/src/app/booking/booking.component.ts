@@ -41,7 +41,8 @@ export class BookingComponent{
   }
   public addAppointment(formValue:Patient):void{
     this.patientService.addAppointment(formValue).
-    subscribe((response:number)=>{this.patientId=response;},
+    subscribe((response:number)=>{this.patientId=response;
+    alert('Appointment Added successfully with ID'+response)},
     (error:HttpErrorResponse)=>{alert(error.message);});
   }
   
