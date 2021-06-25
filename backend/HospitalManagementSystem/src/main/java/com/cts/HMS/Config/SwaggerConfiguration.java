@@ -30,7 +30,7 @@ public class SwaggerConfiguration {
                 .description(" API reference for developers")
                 .termsOfServiceUrl("http://www.github.com/ryuzaki2578")
                 .contact("siddiquikashaf786@gmail.com").license("Test Project")
-                .licenseUrl("siddiquikashaf786@gmail.com").version("1.0").build();
+                .licenseUrl("http://www.github.com/ryuzaki2578").version("1.0").build();
     }
 
 }
